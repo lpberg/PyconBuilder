@@ -1,4 +1,5 @@
-from PyconBuilder import createIconImageFromText
+# -*- coding: latin-1 -*-
+from PyconBuilder import createFlashCardImageFromText
 
 # EXAMPLE USE:
-createIconImageFromText("First_Line Second_Line")
+createFlashCardImageFromText(u"å være*er*var*har vært")
