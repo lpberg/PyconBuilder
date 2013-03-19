@@ -7,7 +7,7 @@ def createIconImageFromText(txt):
 	# split text input into multiple words in a list
 	txt = txt.split()
 	#open background image
-	image = Image.open('base.png')
+	image = Image.open('images/base.png')
 	#create a drawable image
 	draw = ImageDraw.Draw(image)
 	#set initial font size to 1 (smallest)
@@ -75,7 +75,7 @@ def createFlashCardImageFromText(txt):
 	# split text input into multiple words in a list
 	txt = txt.split("*")
 	#open background image
-	image = Image.open('flash_base.png')
+	image = Image.open('images/flash_base.png')
 	#create a drawable image
 	draw = ImageDraw.Draw(image)
 	#set initial font size to 1 (smallest)
@@ -135,6 +135,6 @@ def createFlashCardImageFromText(txt):
 			h = (item+1)*(img_h/(len(txt)+1))-(text_h/2)
 			draw.text((w, h), txt[item], font=font,fill ="#000000")
 		#save image
-		image.save("".join(txt)+'.png') 
+		image.save(txt[0][2:]+'.png') 
 		#print out confirmation to cmdline
-		print("".join(txt)+'.png created successfully')
+		print(txt[0][2:]+'.png created successfully')
